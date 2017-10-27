@@ -1,0 +1,41 @@
+<!--ヤスヒロへ大事なことはコメントアウトのなかに書いておくね-->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- はじめにjQueryを読み込んでから -->
+  <script src="javascripts/jquery-2.1.4.min.js"></script>
+  <!-- やりたいことをプログラミングしていく -->
+  <script>
+    //    はじめにこれを書くお約束
+    $(function() {
+      $('#change').click(function() {
+        $('#comment').text("ういっす").css('color', 'red', 'font-size', '20px').hide(2000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="content">
+    <p class="name">がんばるぞい!</p>
+    <p id="comment">こんちゃ</p>
+    <button id="change">変態だー！</button>
+  </div>
+
+  <!--
+<script>
+  $('#change').click(function() {
+    $('#comment')
+      .text("ういっす")
+      .css('color', 'red', 'font-size', '20px')
+      .hide(2000)
+  });
+</script>
+-->
+
+
+</body>
+
+</html>
