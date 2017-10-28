@@ -1,22 +1,37 @@
 <!--ヤスヒロへ大事なことはコメントアウトのなかに書いておくね-->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <!-- レスポンシブ対応させるための記述 -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>ヤスヒロ | つーぶろ班</title>
   <!-- はじめにjQueryを読み込んでから -->
   <script src="javascripts/jquery-2.1.4.min.js"></script>
   <!-- やりたいことをプログラミングしていく -->
+  <!-- 要素のひとつだけを変化させる記述 -->
   <script>
-    //    はじめにこれを書くお約束
+    //はじめにこれを書くお約束
     $(function() {
       $('#change').click(function() {
         $('#comment').text("ういっす").css('color', 'red', 'font-size', '20px').hide(2000);
       });
     });
-
   </script>
+  <!-- 要素のすべてを変化させる記述 -->
+  <!--<script>
+    //はじめにこれを書くお約束
+    $(function() {
+      $('button').click(function() {
+        $('p').text("ういっす").css('color', 'red', 'font-size', '20px').hide(2000);
+        //.textは要素配下のテキストを取得／設定する
+        //.cssは要素のスタイルプロパティを変更する
+        //.hideは各要素のうち、表示状態にあるものを非表示にする
+      });
+    });
+    </script>-->
+
   <style>
     * {
       margin: 0;
@@ -27,31 +42,34 @@
     }
 
     body {
-      background: #e0e0e0;
+      background: #ededed;
     }
 
+    .content {
+      margin: 0 auto;
+      padding: 5%;
+      width: 50%;
+      background: #ffffff;
+    }
+
+
+    @media only screen and (max-width: 767px) {
+      .content {
+        padding: 5%;
+        width: 100%;
+        background: #ffffff;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="content">
-    <p class="name">がんばるぞい!</p>
+    <h2 class="name">がんばるぞい!</h2>
+    <p id="comment">こんちゃ</p>
     <p id="comment">こんちゃ</p>
     <button id="change">変態だー！</button>
   </div>
-
-  <!--
-<script>
-$('#change').click(function() {
-$('#comment')
-.text("ういっす")
-.css('color', 'red', 'font-size', '20px')
-.hide(2000)
-});
-</script>
--->
-
-
 </body>
 
 </html>
